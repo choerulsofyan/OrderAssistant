@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="frmHelp" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="674.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="penjualan.view.HelpController">
+   <children>
+      <AnchorPane prefHeight="400.0" prefWidth="655.0">
+         <children>
+            <Label layoutX="281.0" layoutY="22.0" text="Help">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+            <TextArea layoutX="21.0" layoutY="86.0" prefHeight="205.0" prefWidth="634.0" text="1. Master -&gt; Barang : Untuk mengelola data barang.&#10;2. Master -&gt; Pelanggan : Untuk mengelola data pelanggan.&#10;3. Transaksi -&gt; Pembelian : Untuk mengelola data pembelian&#10;4. Transaksi -&gt; Penjualan : Untuk mengelola data penjualan&#10;5. Laporan -&gt; Barang : Untuk mengetahui laporan barang&#10;6. Laporan -&gt; Pelanggan : Untuk mengetahui laporan pelanggan&#10;7. Laporan -&gt; Transaksi : Untuk mengetahui data Transaksi&#10;8. Laporan -&gt; Barang Dipasarkan : Untuk mengetahui data barang yang dipasarkan&#10;9. Laporan -&gt; Barang Paling Banyak di Beli : Untuk mengetahuai barang apa saja yang paling banyak dibeli&#10;10. Help -&gt; Untuk menampilkan bantuan / info aplikasi&#10;11. Logout -&gt; Untuk sign out dari aplikasi" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" />
+            <JFXButton fx:id="btnOK" layoutX="294.0" layoutY="327.0" onAction="#handleOkButton" prefHeight="25.0" prefWidth="75.0" style="-fx-background-color: green;" text="OK" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

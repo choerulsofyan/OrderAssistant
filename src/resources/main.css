@@ -1,0 +1,45 @@
+* {
+    -fx-primary: #1565C0;
+    -fx-secondary: #E53935;
+    -fx-primarytext: #B2B2B2;
+    -fx-blue: #1976D2;
+    -fx-red: #FF0000;
+}
+
+.menu .label{     
+    -fx-font-size: 10pt;
+}
+
+.menu-bar {
+    -fx-base: -fx-primary;
+    -fx-background-color: -fx-primary;
+}
+
+.context-menu {
+    -fx-background-color: derive(-fx-primary, 15%);
+    -fx-text-fill: white;
+}
+
+.dialog-button{
+    -fx-background-color: -fx-blue;
+    -fx-border-color: -fx-blue;
+    -fx-text-fill: white;
+}
+
+.dialog-button{
+    -fx-background-color: -fx-blue;
+    -fx-border-color: -fx-blue;
+    -fx-text-fill: white;
+}
+
+.dialog-button:hover{
+    -fx-background-color: -fx-primary;
+    -fx-border-color: -fx-primary;
+    -fx-text-fill: white;
+}
+
+.wrong-credentials
+{
+    -jfx-unfocus-color: -fx-red;
+    -jfx-focus-color: -fx-red;
+}

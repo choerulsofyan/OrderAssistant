@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="wrapper" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="penjualan.view.MasterPelangganController">
+   <children>
+      <AnchorPane fx:id="child">
+         <children>
+            <VBox alignment="TOP_CENTER" prefHeight="737.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <HBox alignment="TOP_CENTER" prefHeight="600.0">
+                     <children>
+                        <Pane maxHeight="580.0" prefHeight="580.0" prefWidth="355.0" style="-fx-background-color: ffffff;">
+                           <children>
+                              <Label layoutX="27.0" layoutY="25.0" text="Input Data Pelanggan" textFill="#009688">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                              <JFXButton fx:id="btnHapus" layoutX="211.0" layoutY="459.0" onAction="#btnHapusHandler" prefHeight="36.0" prefWidth="80.0" style="-fx-background-color: #E53935;" text="Hapus" textFill="WHITE" />
+                              <JFXButton fx:id="btnUpdate" layoutX="118.0" layoutY="459.0" onAction="#btnUpdateHandler" prefHeight="36.0" prefWidth="80.0" style="-fx-background-color: #1565C0;" text="Update" textFill="WHITE" />
+                              <JFXButton fx:id="btnTambah" layoutX="27.0" layoutY="459.0" onAction="#btnTambahHandler" prefHeight="36.0" prefWidth="80.0" style="-fx-background-color: #1565C0;" text="Tambah" textFill="WHITE" />
+                              <JFXTextField fx:id="txtNama" focusColor="#009688" layoutX="27.0" layoutY="115.0" prefHeight="30.0" prefWidth="234.0" promptText="Nama">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </JFXTextField>
+                              <JFXTextField fx:id="txtIdPelanggan" focusColor="#009688" layoutX="27.0" layoutY="66.0" prefHeight="30.0" prefWidth="234.0" promptText="ID Pelanggan">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </JFXTextField>
+                              <JFXButton fx:id="btnClear" layoutX="27.0" layoutY="506.0" onAction="#btnClearHandler" prefHeight="36.0" prefWidth="264.0" style="-fx-background-color: #1565C0;" text="Clear" textFill="WHITE" />
+                              <JFXTextArea fx:id="txtAlamat" layoutX="27.0" layoutY="227.0" prefHeight="135.0" prefWidth="234.0" promptText="Alamat">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </JFXTextArea>
+                              <JFXTextField fx:id="txtNoTelepon" focusColor="#009688" layoutX="27.0" layoutY="383.0" prefHeight="30.0" prefWidth="133.0" promptText="No. Telepon">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </JFXTextField>
+                              <JFXRadioButton fx:id="rdPria" layoutX="141.0" layoutY="167.0" text="Pria">
+                                 <toggleGroup>
+                                    <ToggleGroup fx:id="jenisKelamin" />
+                                 </toggleGroup>
+                              </JFXRadioButton>
+                              <JFXRadioButton fx:id="rdWanita" layoutX="141.0" layoutY="196.0" text="Wanita" toggleGroup="$jenisKelamin" />
+                              <Label layoutX="26.0" layoutY="165.0" text="Jenis Kelamin">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <effect>
+                              <DropShadow blurType="GAUSSIAN" color="#979393" />
+                           </effect>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <HBox.margin>
+                              <Insets right="40.0" />
+                           </HBox.margin>
+                        </Pane>
+                        <TableView fx:id="tblPelanggan" onMouseClicked="#tblPelangganClickHandler" prefHeight="547.0" prefWidth="613.0" tableMenuButtonVisible="true">
+                           <columnResizePolicy>
+                              <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                           </columnResizePolicy>
+                           <columns>
+                              <TableColumn fx:id="colIdPelanggan" editable="false" prefWidth="106.0" resizable="false" text="ID Pelanggan" />
+                              <TableColumn fx:id="colNama" editable="false" minWidth="3.0" prefWidth="155.0" resizable="false" text="Nama" />
+                              <TableColumn fx:id="colJenisKelamin" editable="false" minWidth="2.0" prefWidth="107.0" resizable="false" text="Jenis Kelamin" />
+                              <TableColumn fx:id="colAlamat" minWidth="0.0" prefWidth="44.0" text="Alamat" />
+                              <TableColumn fx:id="colTelepon" minWidth="0.0" prefWidth="123.0" text="No. Telepon" />
+                           </columns>
+                           <effect>
+                              <DropShadow blurType="GAUSSIAN" color="#979393" />
+                           </effect>
+                        </TableView>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+         <padding>
+            <Insets top="40.0" />
+         </padding>
+      </AnchorPane>
+   </children>
+</StackPane>

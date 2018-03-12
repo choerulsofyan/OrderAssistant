@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<StackPane fx:id="rootPane" minHeight="650.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="penjualan.view.MainMenuController">
+   <children>
+      <VBox fx:id="childPane" alignment="TOP_CENTER" prefHeight="124.0" prefWidth="696.0">
+         <children>
+            <MenuBar prefHeight="40.0" prefWidth="696.0" stylesheets="@../../resources/main.css">
+              <menus>
+                <Menu fx:id="menuHome" mnemonicParsing="false" onAction="#loadHome" text="Home">
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../resources/home.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <items>
+                        <MenuItem mnemonicParsing="false" onAction="#loadHome" text="Home" />
+                     </items>
+                </Menu>
+                <Menu fx:id="menuMaster" mnemonicParsing="false" text="Master">
+                  <items>
+                    <MenuItem fx:id="menuMasterPelanggan" mnemonicParsing="false" onAction="#loadMenuMasterPelanggan" text="Pelanggan">
+                           <graphic>
+                              <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../resources/master-pelanggan.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </MenuItem>
+                        <MenuItem fx:id="menuMasterBarang" mnemonicParsing="false" onAction="#loadMenuMasterBarang" text="Barang">
+                           <graphic>
+                              <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../resources/master-barang.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </MenuItem>
+                  </items>
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../resources/master.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                </Menu>
+                <Menu fx:id="menuTransaksi" mnemonicParsing="false" text="Transaksi">
+                  <items>
+                    <MenuItem fx:id="menuTransaksiPembelian" mnemonicParsing="false" onAction="#loadMenuTransaksiPembelian" text="Pembelian">
+                           <graphic>
+                              <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../resources/transaksi-pembelian.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </MenuItem>
+                        <MenuItem fx:id="menuTransaksiPenjualan" mnemonicParsing="false" onAction="#loadMenuTransaksiPenjualan" text="Penjualan">
+                           <graphic>
+                              <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../resources/transaksi-penjualan.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </MenuItem>
+                  </items>
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../resources/transaksi.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                </Menu>
+                  <Menu fx:id="menuLaporan" mnemonicParsing="false" text="Laporan">
+                     <items>
+                        <MenuItem fx:id="menuLaporanBarang" mnemonicParsing="false" onAction="#loadMenuLaporanBarang" text="Barang">
+                           <graphic>
+                              <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../resources/laporan-barang.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </MenuItem>
+                        <MenuItem fx:id="menuLaporanPelanggan" mnemonicParsing="false" onAction="#loadMenuLaporanPelanggan" text="Pelanggan">
+                           <graphic>
+                              <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../resources/laporan-pelanggan.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </MenuItem>
+                        <MenuItem fx:id="menuLaporanTransaksi" mnemonicParsing="false" onAction="#LoadMenuLaporanTransaksi" text="Transaksi">
+                           <graphic>
+                              <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../resources/laporan-transaksi.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </MenuItem>
+                        <MenuItem fx:id="menuLaporanTransaksi1" mnemonicParsing="false" onAction="#LoadMenuLaporanBarangYangDipasarkan" text="Barang Dipasarkan">
+                           <graphic>
+                              <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../resources/laporan-transaksi.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </MenuItem>
+                        <MenuItem fx:id="menuLaporanTransaksi11" mnemonicParsing="false" onAction="#LoadMenuLaporanBarangPalingBanyakDibeli" text="Barang Paling Banyak di Beli">
+                           <graphic>
+                              <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../resources/laporan-transaksi.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </MenuItem>
+                     </items>
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../resources/laporan.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Menu>
+                  <Menu fx:id="menuHelp" mnemonicParsing="false" text="Help">
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../resources/help.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <items>
+                        <MenuItem fx:id="MenuHelp" mnemonicParsing="false" onAction="#handleHelp" text="Help" />
+                     </items>
+                  </Menu>
+                  <Menu fx:id="menuLogout" mnemonicParsing="false" text="Logout">
+                     <graphic>
+                        <ImageView fx:id="imgLogout" fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../resources/logout.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <items>
+                        <MenuItem mnemonicParsing="false" onAction="#handleLogout" text="Logout" />
+                     </items>
+                  </Menu>
+              </menus>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" top="5.0" />
+               </padding>
+            </MenuBar>
+            <VBox fx:id="contentPane" alignment="TOP_CENTER" />
+         </children>
+      </VBox>
+   </children>
+</StackPane>
